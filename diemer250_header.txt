@@ -1,0 +1,18 @@
+#(0)ID (1)DescID (2)M200b (3)Vmax (4)Vrms (5)R200b (6)Rs (7)Np (8)X (9)Y (10)Z (11)VX (12)VY (13)VZ (14)JX (15)JY (16)JZ (17)Spin (18)rs_klypin (19)M200b_all (20)M200b (21)M200c (22)M500c (23)M2500c (24)Xoff (25)Voff (26)spin_bullock (27)b_to_a (28)c_to_a (29)A[x] (30)A[y] (31)A[z] (32)b_to_a(500c) (33)c_to_a(500c) (34)A[x](500c) (35)A[y](500c) (36)A[z](500c) (37)T/|U| (38)M_pe_Behroozi (39)M_pe_Diemer (40)Halfmass_Radius (41)PID
+#a = 1.000000
+#Om = 0.320000; Ol = 0.680000; h = 0.670000
+#FOF linking length: 0.400000
+#Unbound Threshold: 0.500000; FOF Refinement Threshold: 0.700000
+#Particle mass: 1.29244e+09 Msun/h
+#Box size: 250.000000 Mpc/h
+#Force resolution assumed: 0.005 Mpc/h
+#Units: Masses in Msun / h
+#Units: Positions in Mpc / h (comoving)
+#Units: Velocities in km / s (physical, peculiar)
+#Units: Halo Distances, Lengths, and Radii in kpc / h (comoving)
+#Units: Angular Momenta in (Msun/h) * (Mpc/h) * km/s (physical)
+#Units: Spins are dimensionless
+#Np is an internal debugging quantity.
+#Rockstar Version: 0.99.9-RC3+
+28687 -1 1.047e+11 80.78 67.14 112.058 8.830 101 4.57410 3.10772 2.66565 89.68 301.48 233.10 -7.878e+08 -2.221e+09 2.254e+10 0.02337 8.83007 1.0469e+11 1.0469e+11 9.3056e+10 6.8499e+10 0.0000e+00 4.75515 2.06 0.02598 0.75690 0.42353 18.66917 -3.85201 9.97539 0.73880 0.15150 15.09946 -1.09001 4.39429 0.4841 1.330e+11 4.394e+10 41.459 -1
+19933 -1 6.876e+11 137.27 144.04 209.855 25.907 609 6.34300 7.67272 0.00295 86.15 350.15 177.76 -3.963e+11 -3.447e+11 -1.246e+11 0.02019 25.50443 6.8758e+11 6.8758e+11 5.3378e+11 3.6318e+11 1.1761e+11 23.31432 9.31 0.02789 0.58382 0.43887 -3.95734 -7.58086 22.59739 0.86696 0.62011 -0.67129 -8.15862 11.85247 0.6426 6.895e+11 4.498e+11 79.831 -1
