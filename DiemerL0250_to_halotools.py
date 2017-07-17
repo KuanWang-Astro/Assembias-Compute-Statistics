@@ -52,6 +52,14 @@ h_halfmass_radius = hlist[:40]/1000.
 h_pid = hlist[:,41].astype(np.int64)
 h_nfw_conc = h_rvir/h_rs
 
+h_upid = np.copy(h_pid)
+for i in range(len(h_pid)):
+    j = i
+    while(h_pid[j]!=-1):
+        j = np.where(h_id==h_pid[j])
+        h_upid[i] = h_id[j]
+
+
 print 'columns'
 
 
@@ -69,7 +77,7 @@ halo_catalog = USHC(redshift = redshift, Lbox = Lbox, particle_mass = particle_m
                     halo_b_to_a_500c = h_b_to_a_500c, halo_c_to_a_500c = h_c_to_a_500c,\
                     halo_Ax_500c = h_Ax_500c, halo_Ay_500c = h_Ay_500c, halo_Az_500c = h_Az_500c,\
                     halo_t_by_u = h_t_by_u, halo_halfmass_radius = h_halfmass_radius,\
-                    halo_pid = h_pid, halo_nfw_conc = h_nfw_conc)
+                    halo_pid = h_pid, halo_nfw_conc = h_nfw_conc, halo_upid = h_upid)
 print 'catalog'
 
 halo_catalog.add_halocat_to_cache('/home/kuw8/.astropy/cache/halotools/halo_catalogs/diemerL0250/rockstar/z0.0_L0250.catalog.antonio.hdf5', 'diemerL0250', 'rockstar', 'antonio', '#')

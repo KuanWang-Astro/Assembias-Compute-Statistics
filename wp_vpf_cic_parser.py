@@ -10,6 +10,7 @@ parser.add_argument('--redshift',type=float,default=0.,dest='redshift')
 parser.add_argument('--halofinder',default='rockstar',dest='halofinder')
 parser.add_argument('--infile',nargs=2,required=True,dest='infile')
 parser.add_argument('--outfile',required=True,dest='outfile')
+parser.add_argument('--central',type=bool,default=False,dest='central')
 args = parser.parse_args()
 
 import time
@@ -77,6 +78,9 @@ def calc_all_observables(param):
             velocity=model.mock.galaxy_table['vz'], velocity_distortion_dimension='z',\
                                           period=Lbox)             ##redshift space distorted
     pos_gals_d = np.array(pos_gals_d,dtype=float)
+    if args.central:
+        mask_cen = model.mock.galaxy_table['gal_type']=='centrals'
+        pos_gals_d = pos_gals_d[mask_cen]
     
     # ngals
     output.append(model.mock.galaxy_table['x'].size)
