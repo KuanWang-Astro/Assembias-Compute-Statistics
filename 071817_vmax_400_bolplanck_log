@@ -1,0 +1,11 @@
+central:False
+redshift:0.0
+Lbox:250
+halofinder:rockstar
+outfile:071817_vmax_400_bolplanck
+version:halotools_v0p4
+Vmax:400.0
+td:0
+simname:bolplanck
+infile:['../ABMCMCfiles/corr1_wp20.0.abfit.covar.chain', '../ABMCMCfiles/corr1_wp20.0.covar.chain']
+Nparams:1000

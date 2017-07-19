@@ -1,0 +1,11 @@
+central:False
+redshift:0.0
+Lbox:500
+halofinder:rockstar
+outfile:071917_vmax_400_diemerl0500
+version:antonio
+Vmax:400.0
+td:0
+simname:diemerL0500
+infile:['../ABMCMCfiles/corr1_wp20.0.abfit.covar.chain', '../ABMCMCfiles/corr1_wp20.0.covar.chain']
+Nparams:1000

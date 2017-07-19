@@ -11,6 +11,7 @@ parser.add_argument('--halofinder',default='rockstar',dest='halofinder')
 parser.add_argument('--infile',nargs=2,required=True,dest='infile')
 parser.add_argument('--outfile',required=True,dest='outfile')
 parser.add_argument('--central',type=bool,default=False,dest='central')
+parser.add_argument('--Vmax',type=float,default=0.,dest='Vmax')
 args = parser.parse_args()
 
 import time
@@ -35,6 +36,7 @@ from halotools.mock_observables import counts_in_cylinders
 from halotools.mock_observables import void_prob_func
 from halotools.mock_observables import wp
 from halotools.utils import randomly_downsample_data
+from halotools.utils import crossmatch
 
 ##########################################################
 
@@ -81,6 +83,13 @@ def calc_all_observables(param):
     if args.central:
         mask_cen = model.mock.galaxy_table['gal_type']=='centrals'
         pos_gals_d = pos_gals_d[mask_cen]
+        
+    if args.Vmax!=0:
+        idx_galaxies, idx_halos = crossmatch(model.mock.galaxy_table['halo_id'], halocat.halo_table['halo_id'])
+        model.mock.galaxy_table['halo_vmax'] = np.zeros(len(model.mock.galaxy_table), dtype = halocat.halo_table['halo_vmax'].dtype)
+        model.mock.galaxy_table['halo_vmax'][idx_galaxies] = halocat.halo_table['halo_vmax'][idx_halos]
+        mask_Vmax = model.mock.galaxy_table['halo_vmax']>args.Vmax
+        pos_gals_d = pos_gals_d[mask_Vmax]
     
     # ngals
     output.append(model.mock.galaxy_table['x'].size)

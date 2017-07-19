@@ -1,0 +1,11 @@
+central:False
+redshift:0.0
+Lbox:250
+halofinder:rockstar
+outfile:071817_vmax_200_bolplanck_yao
+version:yao
+Vmax:200.0
+td:100
+simname:bolplanck_yao
+infile:['../ABMCMCfiles/corr1_wp20.0.abfit.covar.chain', '../ABMCMCfiles/corr1_wp20.0.covar.chain']
+Nparams:1000

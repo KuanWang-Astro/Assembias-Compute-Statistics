@@ -1,0 +1,11 @@
+central:False
+redshift:0.0
+Lbox:420
+halofinder:rockstar
+outfile:071817_vmax_200_consuelo
+version:all
+Vmax:200.0
+td:850
+simname:consuelo20
+infile:['../ABMCMCfiles/corr1_wp20.0.abfit.covar.chain', '../ABMCMCfiles/corr1_wp20.0.covar.chain']
+Nparams:100
