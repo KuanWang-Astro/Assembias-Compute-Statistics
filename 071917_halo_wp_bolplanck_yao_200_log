@@ -1,0 +1,8 @@
+redshift:0.0
+Lbox:250
+halofinder:rockstar
+outfile:071917_halo_wp_bolplanck_yao_200
+version:yao
+Vmax:200.0
+td:0
+simname:bolplanck_yao

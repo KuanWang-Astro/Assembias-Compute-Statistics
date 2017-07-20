@@ -1,0 +1,8 @@
+redshift:0.0
+Lbox:420
+halofinder:rockstar
+outfile:071917_halo_wp_halotoolsconsuelo_200
+version:halotools_v0p4
+Vmax:200.0
+td:0
+simname:consuelo
