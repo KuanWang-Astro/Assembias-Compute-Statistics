@@ -123,6 +123,7 @@ def main(model_gen_func, params_fname, params_usecols, output_fname):
     nparams = args.Nparams
     params = np.loadtxt(params_fname, usecols=params_usecols)
     params = params[np.random.choice(len(params), nparams)]
+
     
     output_dict = collections.defaultdict(list)
     nproc = 55

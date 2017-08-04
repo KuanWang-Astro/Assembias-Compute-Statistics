@@ -1,0 +1,11 @@
+central:False
+redshift:0.0
+Lbox:420
+halofinder:rockstar
+outfile:072117_consuelo_median
+version:all
+Vmax:0.0
+td:0
+simname:consuelo20
+infile:['../ABMCMCfiles/corr1_wp20.0.abfit.covar.chain.median', '../ABMCMCfiles/corr1_wp20.0.covar.chain.median']
+Nparams:1000
