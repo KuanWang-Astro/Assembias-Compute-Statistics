@@ -12,6 +12,7 @@ parser.add_argument('--infile',nargs=2,required=True,dest='infile')
 parser.add_argument('--outfile',required=True,dest='outfile')
 parser.add_argument('--central',type=bool,default=False,dest='central')
 parser.add_argument('--Vmax',type=float,default=0.,dest='Vmax')
+parser.add_argument('--parallel',type=int,default=55,dest='nproc')
 args = parser.parse_args()
 
 import time
@@ -126,7 +127,7 @@ def main(model_gen_func, params_fname, params_usecols, output_fname):
 
     
     output_dict = collections.defaultdict(list)
-    nproc = 55
+    nproc = args.nproc
     
     global halocat
     
@@ -137,7 +138,7 @@ def main(model_gen_func, params_fname, params_usecols, output_fname):
                                 halo_finder = args.halofinder)
                 model.populate_mock(halocat)
                 for i, output_data in enumerate(pool.map(calc_all_observables, params)):
-                    if i%55 == 54:
+                    if i%nproc == nproc-1:
                         print i
                         print str(datetime.now())
                     for name, data in zip(output_names, output_data):
@@ -148,7 +149,7 @@ def main(model_gen_func, params_fname, params_usecols, output_fname):
                                 halo_finder = args.halofinder)
             model.populate_mock(halocat)
             for i, output_data in enumerate(pool.map(calc_all_observables, params)):
-                if i%55 == 54:
+                if i%nproc == nproc-1:
                     print i
                     print str(datetime.now())
                 for name, data in zip(output_names, output_data):
