@@ -142,7 +142,7 @@ def main(model_gen_func, params_usecols, output_fname):
                 output_dict[name].append(data)
     
     for name in output_names:
-	print name
+        print name
         output_dict[name] = np.array(output_dict[name])
 
     np.savez(output_fname, **output_dict)
